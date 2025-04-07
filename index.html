@@ -14,11 +14,11 @@
 		font-family: Georgia, 'Times New Roman', Times, serif; /* Fonte serifada delicada */
 		font-size: 1.1em; /* Tamanho de fonte confortável */
 		line-height: 1.6;
-        max-width: 800px; /* Limita largura para melhor leitura */
-        margin: 20px auto; /* Centraliza na página */
-        padding: 15px 25px; /* Espaçamento interno */
-        box-shadow: 0 4px 12px rgba(0,0,0,0.08); /* Sombra suave no container */
-        border-radius: 8px; /* Bordas arredondadas no container */
+	        max-width: 800px; /* Limita largura para melhor leitura */
+	        margin: 20px auto; /* Centraliza na página */
+	        padding: 15px 25px; /* Espaçamento interno */
+	        box-shadow: 0 4px 12px rgba(0,0,0,0.08); /* Sombra suave no container */
+	        border-radius: 8px; /* Bordas arredondadas no container */
 	}
 
 	/* Classe para controlar a visibilidade das passagens */
@@ -31,10 +31,10 @@
         animation: fadeIn 0.5s ease-in-out; /* Efeito suave de fade */
 	}
 
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
+	@keyframes fadeIn {
+	from { opacity: 0; }
+	to { opacity: 1; }
+	}
 
 	/* Estilo dos links interativos */
 	a.story-link {
@@ -43,63 +43,63 @@
 		text-decoration: none; /* Sem sublinhado */
 		cursor: pointer; /* Indica que é clicável */
 		transition: color 0.2s ease; /* Transição suave da cor */
-        display: inline-block; /* Permite margin/padding */
-        margin-top: 10px; /* Espaçamento acima dos links */
-        padding: 5px 0; /* Pequeno padding vertical */
-        border-bottom: 1px dashed #d19ba4; /* Linha pontilhada sutil */
+	        display: inline-block; /* Permite margin/padding */
+	        margin-top: 10px; /* Espaçamento acima dos links */
+	        padding: 5px 0; /* Pequeno padding vertical */
+	        border-bottom: 1px dashed #d19ba4; /* Linha pontilhada sutil */
 	}
 	a.story-link:hover {
 		color: #e0b0bb; /* Rosa mais vivo ao passar o mouse */
 		border-bottom-style: solid; /* Linha sólida ao passar o mouse */
 	}
 
-    a.story-link.link-preto {
-        color: #000000; /* Preto */
-        border-bottom-color: #555555; /* Cor da linha pontilhada um pouco mais escura */
-    }
-    /* Opcional: Mudar a cor do hover para o link preto também */
-    a.story-link.link-preto:hover {
-         color: #444444; /* Cinza escuro ao passar o mouse */
-         border-bottom-color: #000000;
-    }
+	a.story-link.link-preto {
+	color: #000000; /* Preto */
+	border-bottom-color: #555555; /* Cor da linha pontilhada um pouco mais escura */
+	}
+	/* Opcional: Mudar a cor do hover para o link preto também */
+	a.story-link.link-preto:hover {
+	color: #444444; /* Cinza escuro ao passar o mouse */
+	border-bottom-color: #000000;
+	}
 
-a.story-link.button-link {
-    display: inline-block; /* Comportamento de bloco, mas ajustado ao conteúdo */
-    background-color: #d19ba4; /* Cor de fundo (rosa do tema) */
-    color: #ffffff; /* Cor do texto (branco) */
-    padding: 12px 25px; /* Espaçamento interno (vertical, horizontal) */
-    border-radius: 25px; /* Bordas bem arredondadas (formato de pílula) */
-    border: none; /* Remove qualquer borda padrão */
-    text-decoration: none; /* Garante que não haja sublinhado */
-    text-align: center; /* Centraliza o texto no botão */
-    font-weight: bold; /* Mantém o negrito */
-    cursor: pointer; /* Mantém o cursor de ponteiro */
-    transition: background-color 0.3s ease, transform 0.1s ease, box-shadow 0.3s ease; /* Transições suaves */
-    margin-top: 20px; /* Aumenta o espaço acima do botão */
-    box-shadow: 0 3px 6px rgba(0,0,0,0.1); /* Sombra suave */
+	a.story-link.button-link {
+	display: inline-block; /* Comportamento de bloco, mas ajustado ao conteúdo */
+	background-color: #d19ba4; /* Cor de fundo (rosa do tema) */
+	color: #ffffff; /* Cor do texto (branco) */
+	padding: 12px 25px; /* Espaçamento interno (vertical, horizontal) */
+	border-radius: 25px; /* Bordas bem arredondadas (formato de pílula) */
+	border: none; /* Remove qualquer borda padrão */
+	text-decoration: none; /* Garante que não haja sublinhado */
+	text-align: center; /* Centraliza o texto no botão */
+	font-weight: bold; /* Mantém o negrito */
+	cursor: pointer; /* Mantém o cursor de ponteiro */
+	transition: background-color 0.3s ease, transform 0.1s ease, box-shadow 0.3s ease; /* Transições suaves */
+	margin-top: 20px; /* Aumenta o espaço acima do botão */
+	box-shadow: 0 3px 6px rgba(0,0,0,0.1); /* Sombra suave */
+	
+	/* Remove a linha pontilhada específica dos links normais */
+	border-bottom: none;
+	}
+	
+	/* Efeito ao passar o mouse (Hover) */
+	a.story-link.button-link:hover {
+	background-color: #c78792; /* Rosa um pouco mais escuro no hover */
+	color: #ffffff; /* Mantém o texto branco */
+	text-decoration: none; /* Garante que não haja sublinhado no hover */
+	transform: translateY(-2px); /* Efeito de leve elevação */
+	box-shadow: 0 5px 10px rgba(0,0,0,0.15); /* Sombra um pouco mais pronunciada */
+	}
 
-    /* Remove a linha pontilhada específica dos links normais */
-    border-bottom: none;
-}
-
-/* Efeito ao passar o mouse (Hover) */
-a.story-link.button-link:hover {
-    background-color: #c78792; /* Rosa um pouco mais escuro no hover */
-    color: #ffffff; /* Mantém o texto branco */
-    text-decoration: none; /* Garante que não haja sublinhado no hover */
-    transform: translateY(-2px); /* Efeito de leve elevação */
-    box-shadow: 0 5px 10px rgba(0,0,0,0.15); /* Sombra um pouco mais pronunciada */
-}
-
-    /* Bloco de links (para espaçamento) */
-    .link-options {
-        margin-top: 20px;
-    }
-    .link-options a.story-link,
-    .link-options button.story-link { /* Se usar botões */
-         display: block; /* Faz cada opção ficar em uma linha */
-         margin-bottom: 8px;
-    }
+	/* Bloco de links (para espaçamento) */
+	.link-options {
+	margin-top: 20px;
+	}
+	.link-options a.story-link,
+	.link-options button.story-link { /* Se usar botões */
+	 display: block; /* Faz cada opção ficar em uma linha */
+	 margin-bottom: 8px;
+	}
 
 	/* Estilo especial para a passagem da Revelação */
 	.passage.revelacao {
@@ -116,24 +116,24 @@ a.story-link.button-link:hover {
         font-size: 1.2em; /* Um pouco maior */
 	}
 
-    strong.nome-bebe {
-         font-size: 1.4em; /* Nome da bebê ainda maior */
-         color: #b36b79; /* Cor um pouco mais intensa para o nome */
-         text-align: center;
-         margin-bottom: 20px;
-    }
+	strong.nome-bebe {
+	 font-size: 1.4em; /* Nome da bebê ainda maior */
+	 color: #b36b79; /* Cor um pouco mais intensa para o nome */
+	 text-align: center;
+	 margin-bottom: 20px;
+	}
 
 	/* Estilo para imagens */
 	.passage img {
 		max-width: 90%; /* Limita a largura máxima da imagem */
         max-height: 400px; /* Limita altura máxima */
         object-fit: cover; /* Cobre a área mantendo proporção */
-		height: auto; /* Mantém a proporção */
-		display: block; /* Para centralizar com margens */
-		margin: 25px auto; /* Espaçamento vertical e centralização horizontal */
-		border-radius: 8px; /* Bordas arredondadas */
-		box-shadow: 0 3px 8px rgba(0,0,0,0.1); /* Sombra mais suave */
-		border: 1px solid #eee; /* Borda muito fina */
+	height: auto; /* Mantém a proporção */
+	display: block; /* Para centralizar com margens */
+	margin: 25px auto; /* Espaçamento vertical e centralização horizontal */
+	border-radius: 8px; /* Bordas arredondadas */
+	box-shadow: 0 3px 8px rgba(0,0,0,0.1); /* Sombra mais suave */
+	border: 1px solid #eee; /* Borda muito fina */
 	}
 
     /* Estilo para vídeo (se usar) */
