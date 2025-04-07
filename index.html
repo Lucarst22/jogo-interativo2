@@ -42,7 +42,7 @@
 			font-weight: bold;
 			text-decoration: none; /* Sem sublinhado */
 			cursor: pointer; /* Indica que é clicável */
-			transition: color 0.2s ease; /* Transição suave da cor */
+			transition: color 0.2s ease, border-color 0.2s ease; /* Transição suave da cor e borda */
             display: inline-block; /* Permite margin/padding */
             margin-top: 10px; /* Espaçamento acima dos links */
             padding: 5px 0; /* Pequeno padding vertical */
@@ -63,33 +63,30 @@
              border-bottom-color: #000000;
         }
 
-	a.story-link.button-link {
-	    display: inline-block; /* Comportamento de bloco, mas ajustado ao conteúdo */
-	    background-color: #d19ba4; /* Cor de fundo (rosa do tema) */
-	    color: #ffffff; /* Cor do texto (branco) */
-	    padding: 12px 25px; /* Espaçamento interno (vertical, horizontal) */
-	    border-radius: 25px; /* Bordas bem arredondadas (formato de pílula) */
-	    border: none; /* Remove qualquer borda padrão */
-	    text-decoration: none; /* Garante que não haja sublinhado */
-	    text-align: center; /* Centraliza o texto no botão */
-	    font-weight: bold; /* Mantém o negrito */
-	    cursor: pointer; /* Mantém o cursor de ponteiro */
-	    transition: background-color 0.3s ease, transform 0.1s ease, box-shadow 0.3s ease; /* Transições suaves */
-	    margin-top: 20px; /* Aumenta o espaço acima do botão */
-	    box-shadow: 0 3px 6px rgba(0,0,0,0.1); /* Sombra suave */
-	
-	    /* Remove a linha pontilhada específica dos links normais */
-	    border-bottom: none;
-	}
-
-	/* Efeito ao passar o mouse (Hover) */
-	a.story-link.button-link:hover {
-	    background-color: #c78792; /* Rosa um pouco mais escuro no hover */
-	    color: #ffffff; /* Mantém o texto branco */
-	    text-decoration: none; /* Garante que não haja sublinhado no hover */
-	    transform: translateY(-2px); /* Efeito de leve elevação */
-	    box-shadow: 0 5px 10px rgba(0,0,0,0.15); /* Sombra um pouco mais pronunciada */
-	}
+        /* Estilo Botão Principal */
+        a.story-link.button-link {
+            display: inline-block; /* Comportamento de bloco, mas ajustado ao conteúdo */
+            background-color: #d19ba4; /* Cor de fundo (rosa do tema) */
+            color: #ffffff; /* Cor do texto (branco) */
+            padding: 12px 25px; /* Espaçamento interno (vertical, horizontal) */
+            border-radius: 25px; /* Bordas bem arredondadas (formato de pílula) */
+            border: none; /* Remove qualquer borda padrão */
+            text-decoration: none; /* Garante que não haja sublinhado */
+            text-align: center; /* Centraliza o texto no botão */
+            font-weight: bold; /* Mantém o negrito */
+            cursor: pointer; /* Mantém o cursor de ponteiro */
+            transition: background-color 0.3s ease, transform 0.1s ease, box-shadow 0.3s ease; /* Transições suaves */
+            margin-top: 20px; /* Aumenta o espaço acima do botão */
+            box-shadow: 0 3px 6px rgba(0,0,0,0.1); /* Sombra suave */
+            border-bottom: none; /* Remove a linha pontilhada específica dos links normais */
+        }
+        a.story-link.button-link:hover {
+            background-color: #c78792; /* Rosa um pouco mais escuro no hover */
+            color: #ffffff; /* Mantém o texto branco */
+            text-decoration: none; /* Garante que não haja sublinhado no hover */
+            transform: translateY(-2px); /* Efeito de leve elevação */
+            box-shadow: 0 5px 10px rgba(0,0,0,0.15); /* Sombra um pouco mais pronunciada */
+        }
 
         /* Bloco de links (para espaçamento) */
         .link-options {
@@ -107,7 +104,6 @@
 			font-size: 1.3em; /* Fonte maior */
 			font-weight: bold; /* Mais peso */
 		}
-		/* Destaque nos nomes dos avós e da bebê */
 		.passage.revelacao strong,
 		.passage strong.nome-bebe {
 			color: #c78792; /* Rosa antigo/profundo */
@@ -161,6 +157,31 @@
             margin-bottom: 1em;
         }
 
+        /* --- NOVO: Estilos para o Botão Voltar --- */
+        .back-button-container {
+            margin-top: 30px; /* Espaço acima do botão voltar */
+            margin-bottom: 10px; /* Espaço abaixo antes das opções */
+            text-align: left; /* Alinha o botão à esquerda */
+            border-top: 1px solid #eee; /* Linha separadora sutil acima */
+            padding-top: 15px; /* Espaçamento acima após a linha */
+        }
+
+        a.back-button {
+            font-size: 0.9em; /* Texto um pouco menor */
+            border-bottom-style: dotted; /* Linha pontilhada */
+            color: #888; /* Cinza mais claro */
+            border-bottom-color: #bbb; /* Cor da linha pontilhada */
+            font-weight: normal; /* Não negrito */
+            display: none; /* Escondido por padrão, JS controla */
+        }
+
+        a.back-button:hover {
+            color: #555; /* Cinza mais escuro no hover */
+            border-bottom-style: solid;
+            border-bottom-color: #888;
+        }
+        /* --- FIM: Estilos Botão Voltar --- */
+
 	</style>
 </head>
 <body>
@@ -183,6 +204,7 @@
 			<div class="link-options">
 				<a href="#" class="button-link" data-target="escolhaMemoria">Sim, vamos lá!</a>
 			</div>
+            <!-- SEM Botão Voltar na primeira passagem -->
 		</div>
 
 		<!-- Passagem 2: Escolha de Memória -->
@@ -191,11 +213,17 @@
 			<p>
 				A nossa história enquanto casal teve marcos importantes, que levaram a tudo que vivemos hoje. Qual destas fundações da nossa vida a dois gostariam de ver primeiro?
 			</p>
+
+            <!-- Bloco do Botão Voltar -->
+            <div class="back-button-container">
+                <a href="#" class="story-link back-button">← Voltar</a>
+            </div>
+            <!-- Fim do Bloco do Botão Voltar -->
+
 			<div class="link-options">
 				<a href="#" class="story-link" data-target="memoriaCasamento">O dia do nosso casamento</a>
 				<a href="#" class="story-link" data-target="memoriaEncontro">O nosso primeiro encontro</a>
 				<a href="#" class="story-link" data-target="memoriaTempoJuntos">O nosso cantinho juntos</a>
-                <!-- Usei "O nosso cantinho juntos" como sugestão -->
 			</div>
 		</div>
 
@@ -211,6 +239,13 @@
 			<p>
 				...e esse amor continuou a crescer e a preparar-nos para novos capítulos.
 			</p>
+
+            <!-- Bloco do Botão Voltar -->
+            <div class="back-button-container">
+                <a href="#" class="story-link back-button">← Voltar</a>
+            </div>
+            <!-- Fim do Bloco do Botão Voltar -->
+
 			<div class="link-options">
 				<a href="#" class="story-link" data-target="presenteMudanca">Continuar a Viagem</a>
 			</div>
@@ -228,6 +263,13 @@
 			<p>
 				...foi o primeiro passo de uma caminhada incrível que nos trouxe até aqui.
 			</p>
+
+            <!-- Bloco do Botão Voltar -->
+            <div class="back-button-container">
+                <a href="#" class="story-link back-button">← Voltar</a>
+            </div>
+            <!-- Fim do Bloco do Botão Voltar -->
+
 			<div class="link-options">
 				<a href="#" class="story-link" data-target="presenteMudanca">Continuar a Viagem</a>
 			</div>
@@ -245,6 +287,13 @@
 			<p>
 				...e é nesse conforto e cumplicidade que agora sonhamos com o futuro.
 			</p>
+
+            <!-- Bloco do Botão Voltar -->
+            <div class="back-button-container">
+                <a href="#" class="story-link back-button">← Voltar</a>
+            </div>
+            <!-- Fim do Bloco do Botão Voltar -->
+
 			<div class="link-options">
 				<a href="#" class="story-link" data-target="presenteMudanca">Continuar a Viagem</a>
 			</div>
@@ -262,6 +311,13 @@
 			<p>
 				O que acham que esta 'reviravolta' envolve?
 			</p>
+
+            <!-- Bloco do Botão Voltar -->
+            <div class="back-button-container">
+                <a href="#" class="story-link back-button">← Voltar</a>
+            </div>
+            <!-- Fim do Bloco do Botão Voltar -->
+
 			<div class="link-options">
 				<a href="#" class="story-link" data-target="despisteProfissional">Uma grande mudança profissional?</a>
 				<a href="#" class="story-link" data-target="despisteAnimal">Decidimos finalmente adotar aquele animal de estimação?</a>
@@ -275,6 +331,13 @@
 			<p>
 				Hehe, uma mudança profissional seria interessante, mas o que temos para contar é muito mais pessoal e... fofo! 😉 Tem mais a ver com aumentar a equipe de casa!
 			</p>
+
+            <!-- Bloco do Botão Voltar -->
+            <div class="back-button-container">
+                <a href="#" class="story-link back-button">← Voltar</a>
+            </div>
+            <!-- Fim do Bloco do Botão Voltar -->
+
 			<div class="link-options">
 				<a href="#" class="story-link" data-target="pistaFinal">Quero saber mais!</a>
 			</div>
@@ -289,6 +352,13 @@
 			<p>
 				Um gatinho seria adorável, não é? (E talvez até já tenhamos um companheiro peludo por aqui!) Mas desta vez, a adição à família terá apenas duas perninhas e vai precisar de muito colo! 😉
 			</p>
+
+            <!-- Bloco do Botão Voltar -->
+            <div class="back-button-container">
+                <a href="#" class="story-link back-button">← Voltar</a>
+            </div>
+            <!-- Fim do Bloco do Botão Voltar -->
+
 			<div class="link-options">
 				<a href="#" class="story-link" data-target="pistaFinal">Estou a ficar curioso(a)!</a>
 			</div>
@@ -300,6 +370,13 @@
 			<p>
 				É algo que vai transformar os nossos dias, encher a casa de um barulho diferente e multiplicar o amor de uma forma que só pode ser vivida...
 			</p>
+
+            <!-- Bloco do Botão Voltar -->
+            <div class="back-button-container">
+                <a href="#" class="story-link back-button">← Voltar</a>
+            </div>
+            <!-- Fim do Bloco do Botão Voltar -->
+
 			<div class="link-options">
 				<a href="#" class="story-link" data-target="pistaFinal">Contem tudo!</a>
 			</div>
@@ -320,6 +397,13 @@
             <p>
                 Sentem a alegria no ar? Estão preparados para descobrir?
             </p>
+
+            <!-- Bloco do Botão Voltar -->
+            <div class="back-button-container">
+                <a href="#" class="story-link back-button">← Voltar</a>
+            </div>
+            <!-- Fim do Bloco do Botão Voltar -->
+
 			<div class="link-options">
 				<a href="#" class="story-link" data-target="revelacao">SIM! O nosso coração está pronto!</a>
 			</div>
@@ -333,6 +417,12 @@
 			<strong>❤️ VOVÔ ANIZIO E VOVÓ VERA! ❤️</strong>
 
 			<p><strong>Com o coração cheio de alegria, compartilhamos com vocês que algo muito especial está a caminho...</strong></p>
+
+            <!-- Bloco do Botão Voltar -->
+            <div class="back-button-container">
+                <a href="#" class="story-link back-button">← Voltar</a>
+            </div>
+            <!-- Fim do Bloco do Botão Voltar -->
 
 			<div class="link-options">
 				<a href="#" class="story-link link-preto" data-target="detalhesFinais">Continuem para saber quem está chegando! ❤️</a>
@@ -376,6 +466,12 @@
             </div>
             -->
 
+            <!-- Bloco do Botão Voltar -->
+            <div class="back-button-container">
+                <a href="#" class="story-link back-button">← Voltar</a>
+            </div>
+            <!-- Fim do Bloco do Botão Voltar -->
+
 			<p style="text-align: center; margin-top: 30px;">
 				Preparem-se para muitos sorrisos, abraços e para a alegria que ela trará!
                 <br>
@@ -390,49 +486,113 @@
 
 	</div> <!-- Fim do #story-container -->
 
-	<!-- Script JavaScript para controlar a navegação -->
+	<!-- Script JavaScript para controlar a navegação (COM BOTÃO VOLTAR) -->
 	<script>
 		document.addEventListener('DOMContentLoaded', function() {
 			const storyContainer = document.getElementById('story-container');
 			const passages = storyContainer.querySelectorAll('.passage');
-			const links = storyContainer.querySelectorAll('a.story-link');
+
+			// --- NOVO: Histórico de Navegação ---
+			let navigationHistory = [];
+			let currentPassageId = 'start'; // Assume que 'start' é a inicial
 
 			// Função para mostrar uma passagem específica e esconder as outras
-			function showPassage(targetId) {
+			function showPassage(targetId, isGoingBack = false) {
+				let previousPassageId = null;
+
 				passages.forEach(passage => {
-					if (passage.id === targetId) {
-						passage.classList.add('active');
-                        // Opcional: Rolar para o topo da passagem mostrada
-                        // passage.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                        // Ou rolar para o topo da página
-                        window.scrollTo({ top: 0, behavior: 'smooth' });
-					} else {
-						passage.classList.remove('active');
+					if (passage.classList.contains('active')) {
+						previousPassageId = passage.id; // Guarda o ID da que estava ativa
 					}
+					passage.classList.remove('active'); // Remove active de todas
 				});
+
+				const targetPassage = document.getElementById(targetId);
+				if (targetPassage) {
+					targetPassage.classList.add('active');
+					currentPassageId = targetId; // Atualiza o ID atual
+
+					// --- NOVO: Atualiza Histórico ---
+					// Só adiciona ao histórico se NÃO estiver voltando
+					// e se a passagem anterior existir e for diferente da atual
+					if (!isGoingBack && previousPassageId && previousPassageId !== targetId) {
+						navigationHistory.push(previousPassageId);
+						// console.log("History updated:", navigationHistory); // Para debug
+					}
+
+					window.scrollTo({ top: 0, behavior: 'smooth' }); // Rola para o topo
+				} else {
+					console.error("Passage not found:", targetId);
+					// Fallback seguro: se não encontrar a passagem ao voltar, vai para o início
+					if (isGoingBack) {
+						showPassage('start', true); // Volta para o início
+						navigationHistory = []; // Limpa o histórico
+					}
+				}
+				 // --- NOVO: Controla visibilidade do botão voltar na passagem ATIVA ---
+				 updateBackButtonVisibility();
 			}
 
-			// Adiciona o listener de clique para cada link da história
-			links.forEach(link => {
-				link.addEventListener('click', function(event) {
-					event.preventDefault(); // Impede o link de navegar para '#'
-					const targetId = this.dataset.target; // Pega o ID da passagem alvo do atributo data-target
-					if (targetId) {
-						showPassage(targetId);
-					} else {
-                        console.error('Link sem data-target definido:', this);
-                    }
-				});
+			// --- NOVO: Função para atualizar visibilidade do botão voltar ---
+			function updateBackButtonVisibility() {
+				// Encontra o botão voltar DENTRO da passagem que ACABOU de ficar ativa
+				 const activePassage = storyContainer.querySelector('.passage.active');
+				 if (!activePassage) return; // Sai se nenhuma passagem estiver ativa
+
+                 const backButton = activePassage.querySelector('.back-button');
+				 if (backButton) {
+					 // Mostra se o histórico não estiver vazio E não estivermos na página inicial, esconde caso contrário
+					 backButton.style.display = (navigationHistory.length > 0 && activePassage.id !== 'start') ? 'inline-block' : 'none';
+				 }
+			}
+
+
+			// Adiciona o listener de clique DELEGADO ao container principal
+			storyContainer.addEventListener('click', function(event) {
+				// Verifica se o clique foi em um link da história (incluindo o botão voltar)
+				const clickedLink = event.target.closest('a.story-link');
+
+				if (clickedLink) {
+					event.preventDefault(); // Impede a navegação padrão do link
+
+					// --- NOVO: Verifica se é o botão Voltar ---
+					if (clickedLink.classList.contains('back-button')) {
+						if (navigationHistory.length > 0) {
+							const previousPassageId = navigationHistory.pop(); // Pega o último ID do histórico
+							// console.log("Going back to:", previousPassageId); // Para debug
+							showPassage(previousPassageId, true); // Mostra a passagem anterior, marcando como 'voltar'
+						} else {
+							 // console.log("History empty, cannot go back."); // Para debug
+						}
+					}
+					// --- Se NÃO for o botão voltar, é um link normal ---
+					else {
+						const targetId = clickedLink.dataset.target;
+						if (targetId) {
+							showPassage(targetId, false); // Mostra a passagem alvo, marcando como 'não voltar' (avanço)
+						} else {
+							console.error('Link sem data-target definido:', clickedLink);
+						}
+					}
+				}
 			});
 
 			// Garante que a passagem inicial ('start') seja exibida ao carregar
-            // (Já feito pelo CSS com a classe 'active' no HTML, mas como garantia)
-			if (!storyContainer.querySelector('.passage.active')) {
-                 const startPassage = document.getElementById('start');
-                 if(startPassage) {
-                    startPassage.classList.add('active');
-                 }
-            }
+			// e determina o currentPassageId inicial
+			const initialActive = storyContainer.querySelector('.passage.active');
+			if (initialActive) {
+				currentPassageId = initialActive.id;
+			} else {
+				 const startPassage = document.getElementById('start');
+				 if(startPassage) {
+					startPassage.classList.add('active');
+					currentPassageId = 'start';
+				 }
+			}
+
+			// --- NOVO: Garante que o botão voltar esteja corretamente escondido no início ---
+			updateBackButtonVisibility();
+
 		});
 	</script>
 
