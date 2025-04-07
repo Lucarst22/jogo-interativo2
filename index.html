@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Uma Surpresa Especial Para Anizio e Vera</title>
+
+	<!-- Estilos CSS (incorporados no HTML) -->
+	<style>
+		/* Estilos gerais da história */
+		body {
+			background-color: #f7f7fc; /* Fundo lilás/acinzentado muito suave */
+			color: #5a5a5a; /* Texto cinza suave */
+			font-family: Georgia, 'Times New Roman', Times, serif; /* Fonte serifada delicada */
+			font-size: 1.1em; /* Tamanho de fonte confortável */
+			line-height: 1.6;
+            max-width: 800px; /* Limita largura para melhor leitura */
+            margin: 20px auto; /* Centraliza na página */
+            padding: 15px 25px; /* Espaçamento interno */
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08); /* Sombra suave no container */
+            border-radius: 8px; /* Bordas arredondadas no container */
+		}
+
+		/* Classe para controlar a visibilidade das passagens */
+		.passage {
+			display: none; /* Esconde todas as passagens por padrão */
+            padding: 10px;
+		}
+		.passage.active {
+			display: block; /* Mostra apenas a passagem ativa */
+            animation: fadeIn 0.5s ease-in-out; /* Efeito suave de fade */
+		}
+
+        @keyframes fadeIn {
+          from { opacity: 0; }
+          to { opacity: 1; }
+        }
+
+		/* Estilo dos links interativos */
+		a.story-link {
+			color: #d19ba4; /* Rosa empoeirado */
+			font-weight: bold;
+			text-decoration: none; /* Sem sublinhado */
+			cursor: pointer; /* Indica que é clicável */
+			transition: color 0.2s ease; /* Transição suave da cor */
+            display: inline-block; /* Permite margin/padding */
+            margin-top: 10px; /* Espaçamento acima dos links */
+            padding: 5px 0; /* Pequeno padding vertical */
+            border-bottom: 1px dashed #d19ba4; /* Linha pontilhada sutil */
+		}
+		a.story-link:hover {
+			color: #e0b0bb; /* Rosa mais vivo ao passar o mouse */
+			border-bottom-style: solid; /* Linha sólida ao passar o mouse */
+		}
+
+        a.story-link.link-preto {
+            color: #000000; /* Preto */
+            border-bottom-color: #555555; /* Cor da linha pontilhada um pouco mais escura */
+        }
+        /* Opcional: Mudar a cor do hover para o link preto também */
+        a.story-link.link-preto:hover {
+             color: #444444; /* Cinza escuro ao passar o mouse */
+             border-bottom-color: #000000;
+        }
+
+        /* Bloco de links (para espaçamento) */
+        .link-options {
+            margin-top: 20px;
+        }
+        .link-options a.story-link,
+        .link-options button.story-link { /* Se usar botões */
+             display: block; /* Faz cada opção ficar em uma linha */
+             margin-bottom: 8px;
+        }
+
+		/* Estilo especial para a passagem da Revelação */
+		.passage.revelacao {
+			text-align: center; /* Centraliza */
+			font-size: 1.3em; /* Fonte maior */
+			font-weight: bold; /* Mais peso */
+		}
+		/* Destaque nos nomes dos avós e da bebê */
+		.passage.revelacao strong,
+		.passage strong.nome-bebe {
+			color: #c78792; /* Rosa antigo/profundo */
+			display: block; /* Faz os nomes ficarem em linhas separadas */
+			margin: 15px 0; /* Espaçamento maior */
+            font-size: 1.2em; /* Um pouco maior */
+		}
+
+        strong.nome-bebe {
+             font-size: 1.4em; /* Nome da bebê ainda maior */
+             color: #b36b79; /* Cor um pouco mais intensa para o nome */
+             text-align: center;
+             margin-bottom: 20px;
+        }
+
+		/* Estilo para imagens */
+		.passage img {
+			max-width: 90%; /* Limita a largura máxima da imagem */
+            max-height: 400px; /* Limita altura máxima */
+            object-fit: cover; /* Cobre a área mantendo proporção */
+			height: auto; /* Mantém a proporção */
+			display: block; /* Para centralizar com margens */
+			margin: 25px auto; /* Espaçamento vertical e centralização horizontal */
+			border-radius: 8px; /* Bordas arredondadas */
+			box-shadow: 0 3px 8px rgba(0,0,0,0.1); /* Sombra mais suave */
+			border: 1px solid #eee; /* Borda muito fina */
+		}
+
+        /* Estilo para vídeo (se usar) */
+        .video-container {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            padding-top: 56.25%; /* Proporção 16:9 */
+            margin: 20px auto;
+            border-radius: 8px;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+        }
+        .video-container iframe,
+        .video-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        /* Pequenos ajustes de espaçamento */
+        p {
+            margin-bottom: 1em;
+        }
+
+	</style>
+</head>
+<body>
+
+	<!-- Container principal da história -->
+	<div id="story-container">
+
+		<!-- Passagem 1: Início (ativa por padrão) -->
+		<div id="start" class="passage active">
+			<!-- [IMAGEM: Adicione aqui o URL de uma foto BONITA VOSSA para começar] -->
+			<img src="URL_FOTO_VOSSA_INICIO_AQUI" alt="Lucas e Leidiane">
+
+			<h2>Queridos Pais,</h2>
+			<p>
+				Temos algo muito especial para partilhar convosco, mas em vez de simplesmente contar, queremos levar-vos numa pequena viagem conosco – uma viagem de memórias e sonhos.
+			</p>
+			<p>
+				Estão prontos para embarcar nesta aventura conosco? Escolham o vosso caminho!
+			</p>
+			<div class="link-options">
+				<a href="#" class="story-link" data-target="escolhaMemoria">Sim, vamos lá!</a>
+			</div>
+		</div>
+
+		<!-- Passagem 2: Escolha de Memória -->
+		<div id="escolhaMemoria" class="passage">
+			<h2>Nossas Fundações</h2>
+			<p>
+				A nossa história enquanto casal teve marcos importantes, que levaram a tudo que vivemos hoje. Qual destas fundações da nossa vida a dois gostariam de ver primeiro?
+			</p>
+			<div class="link-options">
+				<a href="#" class="story-link" data-target="memoriaCasamento">O dia do nosso casamento</a>
+				<a href="#" class="story-link" data-target="memoriaEncontro">O nosso primeiro encontro</a>
+				<a href="#" class="story-link" data-target="memoriaTempoJuntos">O nosso cantinho juntos</a>
+                <!-- Usei "O nosso cantinho juntos" como sugestão -->
+			</div>
+		</div>
+
+		<!-- Passagem 3A: Memória Casamento -->
+		<div id="memoriaCasamento" class="passage">
+			<!-- [IMAGEM: Adicione aqui o URL da FOTO DO CASAMENTO] -->
+			<img src="URL_FOTO_CASAMENTO_AQUI" alt="Nosso Casamento">
+
+			<h2>O Grande Dia</h2>
+			<p>
+				Ah, o casamento! Um dia de sonhos, promessas e o início oficial da nossa família. Olhem a alegria de todos. Foi um dia para celebrar o amor que nos uniu...
+			</p>
+			<p>
+				...e esse amor continuou a crescer e a preparar-nos para novos capítulos.
+			</p>
+			<div class="link-options">
+				<a href="#" class="story-link" data-target="presenteMudanca">Continuar a Viagem</a>
+			</div>
+		</div>
+
+		<!-- Passagem 4: Memória Primeiro Encontro -->
+		<div id="memoriaEncontro" class="passage">
+			<!-- [IMAGEM: Adicione aqui o URL da FOTO DO PRIMEIRO ENCONTRO ou algo simbólico] -->
+			<img src="URL_FOTO_ENCONTRO_AQUI" alt="Nosso Primeiro Encontro">
+
+            <h2>Onde Tudo Começou</h2>
+			<p>
+				O nosso primeiro encontro! Parece que foi ontem... estava tendo um festival em Alphaville, vi um banco vazio e ela estava do lado, fiquei focado no culto. E conversamos, meio tímidos mas conseguimos, e mal sabíamos nós onde aquela conversa nos levaria...
+			</p>
+			<p>
+				...foi o primeiro passo de uma caminhada incrível que nos trouxe até aqui.
+			</p>
+			<div class="link-options">
+				<a href="#" class="story-link" data-target="presenteMudanca">Continuar a Viagem</a>
+			</div>
+		</div>
+
+		<!-- Passagem 5: Memória Tempo Juntos (Casa) -->
+		<div id="memoriaTempoJuntos" class="passage">
+			<!-- [IMAGEM: Adicione aqui o URL da FOTO DE VOCÊS NO LUGAR ONDE FICAM/FICAVAM] -->
+			<img src="URL_FOTO_TEMPO_JUNTOS_AQUI" alt="Nosso Tempo Juntos">
+
+            <h2>Nosso Dia a Dia</h2>
+			<p>
+				Quantos momentos bons passamos em São Paulo! Fomos ao parque, fomos ao culto de Santa Ceia juntos, cozinhamos juntos! São esses pequenos momentos do dia a dia que fortalecem a nossa união e constroem a nossa história...
+			</p>
+			<p>
+				...e é nesse conforto e cumplicidade que agora sonhamos com o futuro.
+			</p>
+			<div class="link-options">
+				<a href="#" class="story-link" data-target="presenteMudanca">Continuar a Viagem</a>
+			</div>
+		</div>
+
+		<!-- Passagem 6: Presente e Mudança -->
+		<div id="presenteMudanca" class="passage">
+			<!-- [IMAGEM: Adicione aqui o URL de uma FOTO VOSSA MAIS RECENTE] -->
+			<img src="URL_FOTO_RECENTE_AQUI" alt="Nós Hoje">
+
+            <h2>Uma Doce Reviravolta</h2>
+			<p>
+				O tempo voou desde esses momentos! Continuamos a construir a nossa vida, sempre juntos. Mas, nos últimos meses, algo muito especial começou a acontecer... Uma doce 'reviravolta' nos nossos planos e rotinas.
+			</p>
+			<p>
+				O que acham que esta 'reviravolta' envolve?
+			</p>
+			<div class="link-options">
+				<a href="#" class="story-link" data-target="despisteProfissional">Uma grande mudança profissional?</a>
+				<a href="#" class="story-link" data-target="despisteAnimal">Decidimos finalmente adotar aquele animal de estimação?</a>
+				<a href="#" class="story-link" data-target="caminhoDireto">Algo que vai mudar a nossa família para sempre?</a>
+			</div>
+		</div>
+
+		<!-- Passagem 7: Despiste Profissional -->
+		<div id="despisteProfissional" class="passage">
+            <h2>Quase isso... mas não! 😉</h2>
+			<p>
+				Hehe, uma mudança profissional seria interessante, mas o que temos para contar é muito mais pessoal e... fofo! 😉 Tem mais a ver com aumentar a equipe de casa!
+			</p>
+			<div class="link-options">
+				<a href="#" class="story-link" data-target="pistaFinal">Quero saber mais!</a>
+			</div>
+		</div>
+
+		<!-- Passagem 8: Despiste Animal -->
+		<div id="despisteAnimal" class="passage">
+            <!-- [IMAGEM: Adicione aqui o URL da FOTO DO GATINHO, se tiverem e quiserem mostrar!] -->
+		    <img src="URL_FOTO_GATINHO_AQUI" alt="Nosso Gatinho (ou um fofo!)">
+
+            <h2>Adorável, mas...</h2>
+			<p>
+				Um gatinho seria adorável, não é? (E talvez até já tenhamos um companheiro peludo por aqui!) Mas desta vez, a adição à família terá apenas duas perninhas e vai precisar de muito colo! 😉
+			</p>
+			<div class="link-options">
+				<a href="#" class="story-link" data-target="pistaFinal">Estou a ficar curioso(a)!</a>
+			</div>
+		</div>
+
+		<!-- Passagem 9: Caminho Direto -->
+		<div id="caminhoDireto" class="passage">
+            <h2>Exatamente! ❤️</h2>
+			<p>
+				É algo que vai transformar os nossos dias, encher a casa de um barulho diferente e multiplicar o amor de uma forma que só pode ser vivida...
+			</p>
+			<div class="link-options">
+				<a href="#" class="story-link" data-target="pistaFinal">Contem tudo!</a>
+			</div>
+		</div>
+
+		<!-- Passagem 10: Pista Final -->
+		<div id="pistaFinal" class="passage">
+			<!-- [IMAGEM: Adicione aqui o URL da FOTO DO ULTRASSOM - a primeira, talvez?] -->
+			<img src="URL_FOTO_ULTRASSOM_AQUI" alt="Uma pequena semente">
+
+            <h2>Um Segredo Precioso 👣</h2>
+			<p>
+				Guardamos este segredo com todo o carinho... um segredo pequenino que já ocupa um espaço gigante nos nossos corações. Estamos a preparar-nos para noites em claro, fraldas, risadas e <strong>uma nova razão para sorrir e amar</strong> que vai iluminar as nossas vidas.
+            </p>
+            <p>
+                Algo muito, muito especial está a caminho...
+            </p>
+            <p>
+                Sentem a alegria no ar? Estão preparados para descobrir?
+            </p>
+			<div class="link-options">
+				<a href="#" class="story-link" data-target="revelacao">SIM! O nosso coração está pronto!</a>
+			</div>
+		</div>
+
+		<!-- Passagem 11: REVELAÇÃO (Anúncio dos Avós) -->
+		<div id="revelacao" class="passage revelacao"> <!-- Adicionada classe 'revelacao' -->
+
+            <p>Pai e Mãe... ou melhor dizendo...</p>
+
+			<strong>❤️ VOVÔ ANIZIO E VOVÓ VERA! ❤️</strong>
+
+			<p><strong>Com o coração cheio de alegria, compartilhamos com vocês que algo muito especial está a caminho...</strong></p>
+
+			<div class="link-options">
+				<a href="#" class="story-link link-preto" data-target="detalhesFinais">Continuem para saber quem está chegando! ❤️</a>
+			</div>
+		</div>
+
+		<!-- Passagem 12: Detalhes Finais (Revelação do Nome e Sexo + Mensagem) -->
+		<div id="detalhesFinais" class="passage">
+            <!-- [IMAGEM: Adicione aqui o URL da FOTO DA REVELAÇÃO DO SEXO - ex: balões rosa, fumaça, etc.] -->
+		    <img src="URL_FOTO_REVELACAO_SEXO_AQUI" alt="É uma Menina!">
+
+			<strong class="nome-bebe">🎉 A nossa princesinha MÉDELLYN está chegando! 🎀</strong>
+
+			<p>
+				É verdade! Em breve, a nossa vida será iluminada pela chegada da pequena Médellyn! (Prevista para <strong>[Substitua pelo Mês/Ano ou Época]</strong>)!
+			</p>
+			<p>
+				A Mamãe Leidiane está ótima e nós dois não podíamos estar mais felizes.
+			</p>
+			<p>
+				Sabemos que <strong>cada momento dessa nova jornada será ainda mais significativo com o amor e a presença de vocês.</strong> Mal podemos esperar para ver a Médellyn receber os vossos mimos e partilhar cada nova descoberta desta fase maravilhosa.
+			</p>
+
+			<!-- [IMAGEM: Adicione aqui o URL de uma FOTO VOSSA ATUAL, felizes!] -->
+			<img src="URL_FOTO_FINAL_FELIZ_AQUI" alt="Lucas e Leidiane Felizes">
+
+			<!-- [VÍDEO: Se quiser adicionar um vídeo (ex: mensagem vossa), pode incorporar o código aqui usando <iframe>] -->
+			<!-- Exemplo de como incorporar YouTube (substitua o CODIGO_DO_SEU_VIDEO): -->
+			<!--
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/CODIGO_DO_SEU_VIDEO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            -->
+            <!-- Exemplo com tag <video> se hospedar o vídeo você mesmo (lembre de ajustar o src): -->
+            <!--
+            <div class="video-container">
+                <video controls>
+                  <source src="URL_DO_SEU_VIDEO.mp4" type="video/mp4">
+                  Seu navegador não suporta o vídeo.
+                </video>
+            </div>
+            -->
+
+			<p style="text-align: center; margin-top: 30px;">
+				Preparem-se para muitos sorrisos, abraços e para a alegria que ela trará!
+                <br>
+				Amamos vocês imensamente!
+                <br><br>
+				Com todo o nosso amor,
+                <br>
+				<strong>Lucas e Leidiane</strong>
+            </p>
+
+		</div>
+
+	</div> <!-- Fim do #story-container -->
+
+	<!-- Script JavaScript para controlar a navegação -->
+	<script>
+		document.addEventListener('DOMContentLoaded', function() {
+			const storyContainer = document.getElementById('story-container');
+			const passages = storyContainer.querySelectorAll('.passage');
+			const links = storyContainer.querySelectorAll('a.story-link');
+
+			// Função para mostrar uma passagem específica e esconder as outras
+			function showPassage(targetId) {
+				passages.forEach(passage => {
+					if (passage.id === targetId) {
+						passage.classList.add('active');
+                        // Opcional: Rolar para o topo da passagem mostrada
+                        // passage.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        // Ou rolar para o topo da página
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+					} else {
+						passage.classList.remove('active');
+					}
+				});
+			}
+
+			// Adiciona o listener de clique para cada link da história
+			links.forEach(link => {
+				link.addEventListener('click', function(event) {
+					event.preventDefault(); // Impede o link de navegar para '#'
+					const targetId = this.dataset.target; // Pega o ID da passagem alvo do atributo data-target
+					if (targetId) {
+						showPassage(targetId);
+					} else {
+                        console.error('Link sem data-target definido:', this);
+                    }
+				});
+			});
+
+			// Garante que a passagem inicial ('start') seja exibida ao carregar
+            // (Já feito pelo CSS com a classe 'active' no HTML, mas como garantia)
+			if (!storyContainer.querySelector('.passage.active')) {
+                 const startPassage = document.getElementById('start');
+                 if(startPassage) {
+                    startPassage.classList.add('active');
+                 }
+            }
+		});
+	</script>
+
+</body>
+</html>
