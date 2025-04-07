@@ -63,6 +63,34 @@
              border-bottom-color: #000000;
         }
 
+	a.story-link.button-link {
+	    display: inline-block; /* Comportamento de bloco, mas ajustado ao conteúdo */
+	    background-color: #d19ba4; /* Cor de fundo (rosa do tema) */
+	    color: #ffffff; /* Cor do texto (branco) */
+	    padding: 12px 25px; /* Espaçamento interno (vertical, horizontal) */
+	    border-radius: 25px; /* Bordas bem arredondadas (formato de pílula) */
+	    border: none; /* Remove qualquer borda padrão */
+	    text-decoration: none; /* Garante que não haja sublinhado */
+	    text-align: center; /* Centraliza o texto no botão */
+	    font-weight: bold; /* Mantém o negrito */
+	    cursor: pointer; /* Mantém o cursor de ponteiro */
+	    transition: background-color 0.3s ease, transform 0.1s ease, box-shadow 0.3s ease; /* Transições suaves */
+	    margin-top: 20px; /* Aumenta o espaço acima do botão */
+	    box-shadow: 0 3px 6px rgba(0,0,0,0.1); /* Sombra suave */
+	
+	    /* Remove a linha pontilhada específica dos links normais */
+	    border-bottom: none;
+	}
+
+/* Efeito ao passar o mouse (Hover) */
+	a.story-link.button-link:hover {
+	    background-color: #c78792; /* Rosa um pouco mais escuro no hover */
+	    color: #ffffff; /* Mantém o texto branco */
+	    text-decoration: none; /* Garante que não haja sublinhado no hover */
+	    transform: translateY(-2px); /* Efeito de leve elevação */
+	    box-shadow: 0 5px 10px rgba(0,0,0,0.15); /* Sombra um pouco mais pronunciada */
+	}
+
         /* Bloco de links (para espaçamento) */
         .link-options {
             margin-top: 20px;
@@ -153,7 +181,7 @@
 				Estão prontos para embarcar nesta aventura conosco? Escolham o vosso caminho!
 			</p>
 			<div class="link-options">
-				<a href="#" class="story-link" data-target="escolhaMemoria">Sim, vamos lá!</a>
+				<a href="#" class="story-link button-link" data-target="escolhaMemoria">Sim, vamos lá!</a>
 			</div>
 		</div>
 
