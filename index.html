@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Uma Surpresa Especial Para Bruno e Andreia</title>
+    <title>Uma Surpresa Especial Para Anizio e Vera</title>
 
     <!-- Estilos CSS (incorporados no HTML) -->
     <style>
@@ -221,7 +221,7 @@
 
         <!-- Passagem 1: Início (ativa por padrão) -->
         <div id="start" class="passage active">
-            <h2>Querido Irmão e Cunhada,</h2>
+            <h2>Irmão e Cunhada,</h2>
             <p>
                 Temos algo muito especial para compartilhar convosco, mas em vez de simplesmente contar, queremos levar-vos numa pequena viagem conosco – uma viagem de memórias e sonhos.
             </p>
@@ -406,27 +406,16 @@
                   document.addEventListener('DOMContentLoaded', function() {
                     const video = document.getElementById('videoRevelacao');
                     const revelacaoPassage = document.getElementById('detalhesFinais');
-                    let playCount = 0;
                     
                     // Observa mudanças na exibição da passagem
                     const observer = new MutationObserver(function(mutations) {
                       if (revelacaoPassage.classList.contains('active')) {
                         // Quando a passagem está ativa, tenta reproduzir com áudio
                         video.muted = false;
-                        playCount = 0; // Reset counter when entering page
                         video.play().catch(e => console.log('Autoplay bloqueado:', e));
                       } else {
                         // Pausa o vídeo quando não está na passagem
                         video.pause();
-                      }
-                    });
-
-                    // Conta as repetições do vídeo
-                    video.addEventListener('ended', function() {
-                      playCount++;
-                      if (playCount < 3) {
-                        video.currentTime = 0;
-                        video.play();
                       }
                     });
 
