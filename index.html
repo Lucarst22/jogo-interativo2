@@ -130,18 +130,15 @@
         }
 
 
-        /* Estilo especial para a passagem da Revelação */
-        .passage.revelacao {
-            text-align: center; /* Centraliza */
-            font-size: 1.3em; /* Fonte maior */
-            font-weight: bold; /* Mais peso */
-            padding: 20px 0;
+        /* Estilo para o texto especial da revelação */
+        .revelacao-texto {
+            text-align: center;
+            margin: 30px 0;
         }
-        .passage.revelacao strong {
-            color: #c78792; /* Rosa antigo/profundo */
-            display: block; /* Nomes em linhas separadas */
-            margin: 20px 0; /* Espaçamento maior */
-            font-size: 1.4em; /* Nomes dos avós maiores */
+        .revelacao-texto strong {
+            color: #c78792;
+            font-size: 1.4em;
+            display: block;
         }
 
         /* Destaque especial para o nome da bebê */
@@ -224,13 +221,9 @@
 
         <!-- Passagem 1: Início (ativa por padrão) -->
         <div id="start" class="passage active">
-            <!-- IMPORTANTE: Substitua 'URL_FOTO_VOSSA_INICIO_AQUI' pelo link real da sua foto -->
-            <!-- IMPORTANTE: Adicione um texto descritivo no 'alt' -->
-            <img src="URL_FOTO_VOSSA_INICIO_AQUI" alt="Lucas e Leidiane sorrindo">
-
             <h2>Queridos Pais,</h2>
             <p>
-                Temos algo muito especial para partilhar convosco, mas em vez de simplesmente contar, queremos levar-vos numa pequena viagem conosco – uma viagem de memórias e sonhos.
+                Temos algo muito especial para compartilhar convosco, mas em vez de simplesmente contar, queremos levar-vos numa pequena viagem conosco – uma viagem de memórias e sonhos.
             </p>
             <p>
                 Estão prontos para embarcar nesta aventura conosco? Escolham o vosso caminho!
@@ -245,7 +238,7 @@
         <div id="escolhaMemoria" class="passage">
             <h2>Nossas Fundações</h2>
             <p>
-                A nossa história enquanto casal teve marcos importantes, que levaram a tudo que vivemos hoje. Qual destas fundações da nossa vida a dois gostariam de relembrar primeiro?
+                A nossa história teve marcos importantes, que levaram a tudo que vivemos hoje. Qual destas fundações da nossa vida gostariam de ver primeiro?
             </p>
             <div class="link-options">
                 <a href="#" class="story-link" data-target="memoriaCasamento">O dia do nosso casamento</a>
@@ -258,7 +251,7 @@
         <div id="memoriaCasamento" class="passage">
             <!-- IMPORTANTE: Substitua pelo URL da foto do casamento -->
             <!-- IMPORTANTE: Adicione um texto descritivo no 'alt' -->
-            <img src="URL_FOTO_CASAMENTO_AQUI" alt="Foto do dia do casamento de Lucas e Leidiane">
+            <img src="https://github.com/Lucarst22/jogo-interativo/blob/main/img/FotoCasamento.JPG?raw=true" alt="Foto do dia do casamento de Lucas e Leidiane">
 
             <h2>O Grande Dia</h2>
             <p>
@@ -276,7 +269,7 @@
         <div id="memoriaEncontro" class="passage">
             <!-- IMPORTANTE: Substitua pelo URL da foto (ou algo simbólico) -->
             <!-- IMPORTANTE: Adicione um texto descritivo no 'alt' -->
-            <img src="URL_FOTO_ENCONTRO_AQUI" alt="Lembrança do primeiro encontro">
+            <img src="https://github.com/Lucarst22/jogo-interativo/blob/main/img/PrimeiroEncontro.jpg?raw=true" alt="Lembrança do primeiro encontro">
 
             <h2>Onde Tudo Começou</h2>
             <p>
@@ -294,11 +287,11 @@
         <div id="memoriaTempoJuntos" class="passage">
             <!-- IMPORTANTE: Substitua pelo URL da foto de vocês em casa/passeio -->
             <!-- IMPORTANTE: Adicione um texto descritivo no 'alt' -->
-            <img src="URL_FOTO_TEMPO_JUNTOS_AQUI" alt="Lucas e Leidiane em um momento juntos">
+            <img src="https://github.com/Lucarst22/jogo-interativo/blob/main/img/NossoCantinho.jpg?raw=true" alt="Lucas e Leidiane em um momento juntos">
 
             <h2>Nosso Dia a Dia</h2>
             <p>
-                Quantos momentos preciosos construímos juntos em São Paulo! Passeios no parque, a comunhão na Santa Ceia, as refeições preparadas a quatro mãos... São esses pequenos e grandes momentos do dia a dia que fortalecem a nossa união e tecem a nossa história...
+                Quantos momentos preciosos! São esses pequenos e grandes momentos do dia a dia que fortalecem a nossa união e tecem a nossa história...
             </p>
             <p>
                 ...e é nesse ninho de conforto, cumplicidade e amor que agora sonhamos e planejamos o futuro que Deus tem para nós.
@@ -312,7 +305,7 @@
         <div id="presenteMudanca" class="passage">
             <!-- IMPORTANTE: Substitua pelo URL de uma foto vossa mais recente -->
             <!-- IMPORTANTE: Adicione um texto descritivo no 'alt' -->
-            <img src="URL_FOTO_RECENTE_AQUI" alt="Lucas e Leidiane hoje">
+            <img src="https://github.com/Lucarst22/jogo-interativo/blob/main/img/Reviravolta.jpg?raw=true" alt="Lucas e Leidiane hoje">
 
             <h2>Uma Doce Reviravolta</h2>
             <p>
@@ -332,7 +325,7 @@
         <div id="despisteProfissional" class="passage">
             <h2>Quase isso... mas não! 😉</h2>
             <p>
-                Hehe, uma mudança profissional seria interessante, claro! Mas o que temos para contar é muito mais pessoal, transformador e... incrivelmente fofo! 😉 Tem mais a ver com aumentar a 'equipa' cá de casa!
+                Hehe, uma mudança profissional seria interessante, claro! Mas o que temos para contar é muito melhor...
             </p>
             <div class="link-options">
                 <a href="#" class="story-link" data-target="pistaFinal">Quero saber mais!</a>
@@ -344,11 +337,11 @@
             <!-- OPCIONAL: Se tiverem foto do gatinho, use-a. Senão, pode remover a tag img ou usar uma genérica -->
             <!-- IMPORTANTE: Substitua pelo URL da foto do animal (se aplicável) -->
             <!-- IMPORTANTE: Adicione um texto descritivo no 'alt' -->
-            <img src="URL_FOTO_GATINHO_AQUI" alt="Um gatinho fofo">
+            <img src="https://github.com/Lucarst22/jogo-interativo/blob/main/img/GatinhoAdotado.jpg?raw=true" alt="Um gatinho fofo">
 
             <h2>Adorável, mas...</h2>
             <p>
-                Um animalzinho é sempre uma alegria, não é? (E talvez até já tenhamos o nosso companheiro peludo!). Mas desta vez, a adição à família terá apenas duas perninhas (bem pequeninas!), um chorinho que vai derreter corações e vai precisar de muito, muito colo! 😉
+                Um animalzinho é sempre uma alegria, não é? (E já tenhamos o nosso companheiro peludo!).
             </p>
             <div class="link-options">
                 <a href="#" class="story-link" data-target="pistaFinal">Estou a ficar muito curioso(a)!</a>
@@ -370,7 +363,6 @@
         <div id="pistaFinal" class="passage">
             <!-- IMPORTANTE: Substitua pelo URL da foto do ultrassom -->
             <!-- IMPORTANTE: Adicione um texto descritivo no 'alt' (ex: 'Primeira imagem do nosso bebê') -->
-            <img src="URL_FOTO_ULTRASSOM_AQUI" alt="Imagem de ultrassom mostrando uma pequena semente de vida">
 
             <h2>Um Segredo Precioso 👣</h2>
             <p>
@@ -388,30 +380,70 @@
         </div>
 
         <!-- Passagem 11: REVELAÇÃO (Anúncio dos Avós) -->
-        <div id="revelacao" class="passage revelacao"> <!-- Classe 'revelacao' para estilo especial -->
+        <div id="revelacao" class="passage">
+            <h2>Pai e Mãe...</h2>
+            <p>Chegou a hora de vos contar... Preparem os vossos corações para uma nova e linda missão:</p>
 
-            <p style="font-size: 1.1em; margin-bottom: 30px;">Pai e Mãe... chegou a hora de vos contar... <br> Preparem os vossos corações para uma nova e linda missão:</p>
+            <div class="revelacao-texto">
+                <strong>❤️ SEREM O VOVÔ ANIZIO E A VOVÓ VERA! ❤️</strong>
+            </div>
 
-            <strong>❤️ SEREM O VOVÔ ANIZIO E A VOVÓ VERA! ❤️</strong>
-
-            <p style="font-size: 1.1em; margin-top: 30px;"><strong>Com o coração a transbordar de alegria, compartilhamos convosco que a nossa família vai crescer!</strong></p>
+            <p>Com o coração a transbordar de alegria, compartilhamos convosco que a nossa família vai crescer!</p>
 
             <div class="link-options">
-                <a href="#" class="story-link link-preto" data-target="detalhesFinais">Continuem para saber quem está chegando! ❤️</a>
+                <a href="#" class="story-link" data-target="detalhesFinais">Continuem para saber quem está chegando! ❤️</a>
             </div>
         </div>
 
         <!-- Passagem 12: Detalhes Finais (Revelação do Nome e Sexo + Mensagem) -->
         <div id="detalhesFinais" class="passage">
-            <!-- IMPORTANTE: Substitua pelo URL da foto da revelação do sexo (balões, fumo, etc.) -->
-            <!-- IMPORTANTE: Adicione um texto descritivo no 'alt' (ex: 'Revelação - É uma menina!') -->
-            <img src="URL_FOTO_REVELACAO_SEXO_AQUI" alt="É uma Menina!">
+            <div class="video-container">
+                <video id="videoRevelacao" controls autoplay playsinline>
+                  <source src="https://github.com/Lucarst22/jogo-interativo/blob/main/BebeRevelacaoSexo.mp4?raw=true" type="video/mp4">
+                  Seu navegador não suporta vídeos HTML5.
+                </video>
+                <script>
+                  document.addEventListener('DOMContentLoaded', function() {
+                    const video = document.getElementById('videoRevelacao');
+                    const revelacaoPassage = document.getElementById('detalhesFinais');
+                    let playCount = 0;
+                    
+                    // Observa mudanças na exibição da passagem
+                    const observer = new MutationObserver(function(mutations) {
+                      if (revelacaoPassage.classList.contains('active')) {
+                        // Quando a passagem está ativa, tenta reproduzir com áudio
+                        video.muted = false;
+                        playCount = 0; // Reset counter when entering page
+                        video.play().catch(e => console.log('Autoplay bloqueado:', e));
+                      } else {
+                        // Pausa o vídeo quando não está na passagem
+                        video.pause();
+                      }
+                    });
+
+                    // Conta as repetições do vídeo
+                    video.addEventListener('ended', function() {
+                      playCount++;
+                      if (playCount < 3) {
+                        video.currentTime = 0;
+                        video.play();
+                      }
+                    });
+
+                    // Observa mudanças na classe 'active'
+                    observer.observe(revelacaoPassage, {
+                      attributes: true,
+                      attributeFilter: ['class']
+                    });
+                  });
+                </script>
+            </div>
 
             <!-- Nome da bebê com destaque -->
             <strong class="nome-bebe">🎉 A nossa princesinha MÉDELLYN está chegando! 🎀</strong>
 
             <p>
-                É verdade! Uma menina! Em breve, a nossa vida será ainda mais cor-de-rosa (literalmente!) com a chegada da pequena Médellyn! A previsão é para <strong>[Substitua aqui pelo Mês/Trimestre/Ano Previsto - Ex: Novembro/2024, Último trimestre de 2024]</strong>!
+                É verdade! Uma menina! Em breve, a nossa vida será ainda mais cor-de-rosa (literalmente!) com a chegada da pequena Médellyn!
             </p>
             <p>
                 A Mamãe Leidiane está ótima, a sentir todas as maravilhas (e desafios!) desta fase, e nós dois não poderíamos estar mais felizes e gratos por esta dádiva.
@@ -419,27 +451,6 @@
             <p>
                 Sabemos que <strong>cada passo, cada descoberta e cada momento desta nova jornada será ainda mais especial e significativo com o amor, o carinho, a sabedoria e a presença de vocês.</strong> Mal podemos esperar para ver a Médellyn receber os vossos mimos de avós e partilhar cada nova gracinha desta fase maravilhosa que se inicia.
             </p>
-
-            <!-- IMPORTANTE: Substitua pelo URL de uma foto vossa atual, felizes -->
-            <!-- IMPORTANTE: Adicione um texto descritivo no 'alt' -->
-            <img src="URL_FOTO_FINAL_FELIZ_AQUI" alt="Lucas e Leidiane felizes com a notícia">
-
-            <!-- OPCIONAL: Se quiser adicionar um vídeo (ex: mensagem vossa), descomente e ajuste o código abaixo -->
-            <!-- Exemplo de como incorporar YouTube (substitua 'CODIGO_DO_SEU_VIDEO'): -->
-            <!--
-            <div class="video-container">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/CODIGO_DO_SEU_VIDEO" title="Uma mensagem para vocês!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            </div>
-            -->
-            <!-- Exemplo com tag <video> se hospedar o vídeo você mesmo (lembre de ajustar o src): -->
-            <!--
-            <div class="video-container">
-                <video controls>
-                  <source src="URL_DO_SEU_VIDEO.mp4" type="video/mp4">
-                  O seu navegador não suporta a tag de vídeo.
-                </video>
-            </div>
-            -->
 
             <div class="final-message">
                 <p>
@@ -468,8 +479,16 @@
             // Seleciona todos os links com a classe 'story-link' dentro do container
             const links = storyContainer.querySelectorAll('a.story-link');
 
+            // Histórico de navegação
+            let history = ['start'];
+            
             // Função para mostrar uma passagem específica e esconder as outras
             function showPassage(targetId) {
+                // Adiciona ao histórico
+                if (targetId !== history[history.length-1]) {
+                    history.push(targetId);
+                }
+                
                 passages.forEach(passage => {
                     // Verifica se o ID da passagem atual é o ID alvo
                     if (passage.id === targetId) {
@@ -480,6 +499,15 @@
                         passage.classList.remove('active'); // Esconde as outras passagens
                     }
                 });
+            }
+
+            // Função para voltar à passagem anterior
+            function goBack() {
+                if (history.length > 1) {
+                    history.pop(); // Remove a atual
+                    const prevId = history[history.length-1];
+                    showPassage(prevId);
+                }
             }
 
             // Adiciona um 'ouvinte' de clique para cada link da história
@@ -496,6 +524,86 @@
                         console.error('Link sem data-target definido:', this);
                     }
                 });
+            });
+
+            // Adiciona estilo CSS definitivo para o botão voltar
+            const style = document.createElement('style');
+            style.textContent = `
+                .passage {
+                    position: relative;
+                    padding: 20px;
+                }
+                .back-button-container {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 40px;
+                    background: white;
+                    z-index: 10;
+                }
+                .back-button {
+                    position: absolute;
+                    left: 20px;
+                    top: 10px;
+                    background: white;
+                    padding: 5px 10px;
+                    text-decoration: none;
+                    color: #333;
+                    font-weight: bold;
+                    border: none;
+                }
+                .passage-content {
+                    margin-top: 30px;
+                }
+            `;
+            document.head.appendChild(style);
+
+            // Adiciona container fixo para o botão em cada passage
+            passages.forEach(passage => {
+                if (passage.id !== 'start') {
+                    // Salva referência aos links originais
+                    const originalLinks = Array.from(passage.querySelectorAll('a.story-link'));
+                    
+                    // Cria container do botão
+                    const btnContainer = document.createElement('div');
+                    btnContainer.className = 'back-button-container';
+                    
+                    // Cria botão voltar
+                    const backBtn = document.createElement('a');
+                    backBtn.href = '#';
+                    backBtn.className = 'back-button';
+                    backBtn.textContent = '← Voltar';
+                    backBtn.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        goBack();
+                    });
+                    
+                    // Cria container para o conteúdo
+                    const contentDiv = document.createElement('div');
+                    contentDiv.className = 'passage-content';
+                    
+                    // Move os elementos filhos para o contentDiv
+                    while (passage.firstChild) {
+                        contentDiv.appendChild(passage.firstChild);
+                    }
+                    
+                    // Reaplica os event listeners aos links originais
+                    originalLinks.forEach(link => {
+                        link.addEventListener('click', function(event) {
+                            event.preventDefault();
+                            const targetId = this.dataset.target;
+                            if (targetId) {
+                                showPassage(targetId);
+                            }
+                        });
+                    });
+                    
+                    // Monta a nova estrutura
+                    passage.appendChild(btnContainer);
+                    passage.appendChild(contentDiv);
+                    btnContainer.appendChild(backBtn);
+                }
             });
 
             // Garante que apenas a passagem inicial ('start') seja exibida ao carregar
